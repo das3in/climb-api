@@ -31,7 +31,7 @@ module GoalsApi
     config.api_only = true
     config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
       allow do
-        origins "localhost:3001", "http://192.168.1.144:3001", "localhost:5000", "http://192.168.1.144:5000"
+        origins "*"
         resource "*", headers: :any, methods: [:get, :post, :options]
       end
     end

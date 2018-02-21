@@ -1,11 +1,12 @@
 source "https://rubygems.org"
 
+ruby "2.5.0"
+
 gem "rails", "~> 5.1.5"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.7"
 gem "bcrypt", "~> 3.1.7"
 gem "rack-cors"
-gem "fast_jsonapi"
 gem "jbuilder"
 
 group :development, :test do
