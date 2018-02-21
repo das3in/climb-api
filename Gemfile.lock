@@ -52,11 +52,6 @@ GEM
     factory_bot_rails (4.8.2)
       factory_bot (~> 4.8.2)
       railties (>= 3.0.0)
-    fast_jsonapi (1.0.17)
-      activerecord (~> 5.0)
-      activesupport (~> 5.0)
-      multi_json (~> 1.12)
-      oj (~> 3.3)
     ffi (1.9.21)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -82,7 +77,6 @@ GEM
     nio4r (2.2.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
-    oj (3.4.0)
     pg (1.0.0)
     puma (3.11.2)
     rack (2.0.4)
@@ -164,7 +158,6 @@ DEPENDENCIES
   byebug
   database_cleaner
   factory_bot_rails
-  fast_jsonapi
   jbuilder
   pg (>= 0.18, < 2.0)
   puma (~> 3.7)
@@ -175,6 +168,9 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
+
+RUBY VERSION
+   ruby 2.5.0p0
 
 BUNDLED WITH
    1.16.1
