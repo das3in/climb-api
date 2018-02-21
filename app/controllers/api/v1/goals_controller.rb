@@ -5,7 +5,7 @@ module Api
       attr_accessor :category_name
 
       def index
-        @goals = Goal.all.preload(:category).order(:created_at)
+        @goals = Goal.all.preload(:category).order(created_at: :desc)
       end
 
       def create

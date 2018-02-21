@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20180217051332) do
     t.bigint "category_id"
     t.string "item"
     t.string "interval"
-    t.float "value"
-    t.float "goal"
+    t.float "value", default: 0.0
+    t.float "goal", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_goals_on_category_id"
