@@ -1,16 +1,18 @@
 module Api
   module V1
-    class GoalsController < ActionController::API
+    class GoalsController < ApplicationController
       include ActionController::MimeResponds
-      attr_accessor :category_name
+      before_action :authenticate_user
 
       def index
-        @goals = Goal.all.preload(:category).order(created_at: :desc)
+        @goals = current_user.goals.preload(:category).order(created_at: :desc)
       end
 
       def create
         category = Category.find_by(name: params[:category][:name])
-        @goal = Goal.new(goal_params.merge(category_id: category.id))
+        @goal = current_user.goals.build(
+          goal_params.merge(category_id: category.id)
+        )
         @goal.save
       end
 
