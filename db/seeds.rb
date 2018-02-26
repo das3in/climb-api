@@ -5,7 +5,7 @@ objectives = Category.find_or_create_by(name: "Objectives")
 vision = Category.find_or_create_by(name: "Vision")
 games = Category.find_or_create_by(name: "Games")
 teamwork = Category.find_or_create_by(name: "Teamwork")
-custom = Category.find_or_create_by(name: "Custom")
+champion = Category.find_or_create_by(name: "Champion")
 
 Goal.create!(
   category: minions,
@@ -13,6 +13,7 @@ Goal.create!(
   interval: "minute",
   goal: 9,
   value: 6.5,
+  user: User.first,
 )
 Goal.create!(
   category: kda,
@@ -20,6 +21,7 @@ Goal.create!(
   interval: "game",
   goal: 8,
   value: 4,
+  user: User.first,
 )
 Goal.create!(
   category: vision,
@@ -27,6 +29,7 @@ Goal.create!(
   interval: "game",
   goal: 5,
   value: 2,
+  user: User.first,
 )
 Goal.create!(
   category: games,
@@ -34,4 +37,5 @@ Goal.create!(
   interval: "day",
   goal: 5,
   value: 1,
+  user: User.first,
 )

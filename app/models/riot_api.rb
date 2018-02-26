@@ -9,13 +9,13 @@ class RiotApi
     JSON.parse(response.body)
   end
 
-  def get_recent_matchlist(accountId)
-    response = HTTParty.get("#{@API_URL}/lol/match/v3/matchlists/by-account/#{accountId}/recent?api_key=#{@API_KEY}")
+  def get_recent_matchlist(account_id)
+    response = HTTParty.get("#{@API_URL}/lol/match/v3/matchlists/by-account/#{account_id}/recent?api_key=#{@API_KEY}")
     JSON.parse(response.body)
   end
 
-  def get_matchlist_since_timestamp(accountId, timestamp)
-    response = HTTParty.get("#{@API_URL}/lol/match/v3/matchlists/by-account/#{accountId}?beginTime=#{options}&api_key=#{@API_KEY}")
+  def get_matchlist_since_timestamp(account_id, timestamp)
+    response = HTTParty.get("#{@API_URL}/lol/match/v3/matchlists/by-account/#{account_id}?beginTime=#{options}&api_key=#{@API_KEY}")
     JSON.parse(response.body)
   end
 
