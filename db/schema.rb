@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180223021302) do
+ActiveRecord::Schema.define(version: 20180225043754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,19 @@ ActiveRecord::Schema.define(version: 20180223021302) do
     t.bigint "user_id"
     t.index ["category_id"], name: "index_goals_on_category_id"
     t.index ["user_id"], name: "index_goals_on_user_id"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.string "platformId"
+    t.string "gameId"
+    t.integer "champion"
+    t.integer "queue"
+    t.integer "season"
+    t.string "timestamp"
+    t.string "role"
+    t.string "lane"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
