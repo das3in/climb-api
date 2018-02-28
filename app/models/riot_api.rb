@@ -1,7 +1,7 @@
 class RiotApi
   def initialize
     @API_URL = "https://na1.api.riotgames.com"
-    @API_KEY = "RGAPI-58ee524e-a3cf-4f89-97b4-4e626a594477"
+    @API_KEY = "RGAPI-cef03444-ac8a-4986-aa22-ed1a9f7ce25e"
   end
 
   def get_summoner(name)
